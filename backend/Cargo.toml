@@ -1,0 +1,31 @@
+[package]
+name = "unskilled-trade"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+axum = "0.8"
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+rusqlite = { version = "0.37", features = ["bundled"] }
+argon2 = "0.5"
+rand = "0.8"
+sha2 = "0.10"
+uuid = { version = "1", features = ["v4"] }
+dotenvy = "0.15"
+tower-http = { version = "0.6", features = ["fs", "trace"] }
+tracing-subscriber = "0.3"
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+bs58 = "0.5"
+tokio-tungstenite = { version = "0.30.0", features = ["rustls-tls-webpki-roots"] }
+futures-util = "0.3.34"
+ed25519-dalek = "3.0.0"
+k256 = "0.14.0"
+sha3 = "0.12.0"
+chacha20poly1305 = "0.11.0"
+base64 = "0.23.1"
+
+[dev-dependencies]
+tower = { version = "0.5", features = ["util"] }
+http-body-util = "0.1"
